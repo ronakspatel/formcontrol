@@ -17,17 +17,18 @@ export class InstanceComponent implements OnInit {
 
     //Create using FormControl Instance
     this.name = new FormControl('');
-
     //Create using FormGroup Instance
-    this.profileForm = new FormGroup({
-      firstName: new FormControl('', Validators.required),
-      lastName: new FormControl('', Validators.required),
-    });
+    this.profileForm= new FormGroup({});
+   
 
 
   }
 
   ngOnInit() {
+    this.profileForm = new FormGroup({
+      firstName: new FormControl('', Validators.required),
+      lastName: new FormControl('', Validators.required),
+    });
   }
 
   updateName() {

@@ -12,19 +12,8 @@ export class FormbuilderComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     //Create using FormBuilder
-    this.profileForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      address: this.fb.group({
-        street: ['', Validators.required],
-        city: ['', Validators.required],
-        state: ['', Validators.required],
-        zip: ['', Validators.required]
-      }),
-      technology: this.fb.array([
-        this.fb.control(''),this.fb.control('')
-      ])
-    });
+    this.profileForm=this.fb.group({});
+    
   }
   //to convert technology to FormArray 
   get technology() {
@@ -63,6 +52,19 @@ export class FormbuilderComponent implements OnInit {
     alert('set selected value');
   }
   ngOnInit() {
+    this.profileForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      address: this.fb.group({
+        street: ['', Validators.required],
+        city: ['', Validators.required],
+        state: ['', Validators.required],
+        zip: ['', Validators.required]
+      }),
+      technology: this.fb.array([
+        this.fb.control(''),this.fb.control('')
+      ])
+    });
   }
 
 }
