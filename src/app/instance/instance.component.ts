@@ -8,10 +8,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class InstanceComponent implements OnInit {
   //Create for FormControl
-  public name;
+  public name:FormControl;
 
   //Create for FormGroup
-  public profileForm;
+  public profileForm:FormGroup;
 
   constructor() {
 

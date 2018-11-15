@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-formbuilder',
@@ -8,7 +8,7 @@ import { FormBuilder, Validators, FormArray } from '@angular/forms';
 })
 export class FormbuilderComponent implements OnInit {
   //Create for NestedGroup
-  public profileForm;
+  public profileForm:FormGroup;
 
   constructor(private fb: FormBuilder) {
     //Create using FormBuilder
