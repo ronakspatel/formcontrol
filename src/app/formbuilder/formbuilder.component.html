@@ -38,7 +38,7 @@
       <div *ngFor="let address of technology.controls; let i=index">
         
         <label>
-          Technology:
+          Technology:{{i+1}}
           <input type="text" [formControlName]="i">
         </label>
       </div>

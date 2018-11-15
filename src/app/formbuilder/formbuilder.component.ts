@@ -22,7 +22,7 @@ export class FormbuilderComponent implements OnInit {
         zip: ['', Validators.required]
       }),
       technology: this.fb.array([
-        this.fb.control('')
+        this.fb.control(''),this.fb.control('')
       ])
     });
   }
