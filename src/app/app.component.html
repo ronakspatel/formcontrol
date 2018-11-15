@@ -1,0 +1,10 @@
+<h1>Reactive Forms</h1>
+
+<nav>
+  <a (click)="toggleEditor('instance')">Instance Base</a>
+  <a (click)="toggleEditor('formBuilder')">FormBuilder Base</a>
+</nav>
+
+<app-instance *ngIf="showInstance"></app-instance>
+
+<app-formbuilder *ngIf="showFormBuilder"></app-formbuilder>
